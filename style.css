@@ -1,0 +1,210 @@
+/* BASIC RESET & BODY STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #222;  /* black/dark background */
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #fff;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* HEADER & NAVIGATION */
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #000;  /* pure black nav */
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    margin: auto;
+    display: block;
+    
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    background-image: repeating-linear-gradient(to top, rgb(0, 0, 0) , rgb(59, 59, 59));
+    border-bottom: 4px solid red;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+  }
+  
+  nav ul li a.active {
+    color: #fff;
+    background-color: #c00; /* highlight active tab in red */
+  }
+  
+  /* MAIN CONTENT */
+  main {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* HERO SECTION (Page 1) */
+  .hero {
+    background: url("the\ day\ the\ earth\ smiled\ new.png") center center / cover no-repeat;
+    /* Use your actual background image if you have one,
+       or remove this if you want a different background. */
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 1px solid #444;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .preview-btn {
+    background-color: #c00;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-btn:hover {
+    background-color: #f00;
+  }
+  
+  .available-on {
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  
+  .available-on a {
+    color: #ffb3b3; /* Light red/pink for links */
+    text-decoration: underline;
+  }
+  
+  /* NEWS SECTION (Page 1) */
+  .news-section {
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    padding: 1rem;
+  }
+  
+  .news-header + .news-header {
+    margin-top: 1rem;
+  }
+  
+  .news-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff5555;
+  }
+  
+  /* ABOUT SECTION (Page 1) */
+  .about-section {
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    padding: 1rem;
+  }
+  
+  .about-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff5555;
+  }
+  
+  /* RELEASE SECTIONS (Page 2) */
+  .release-section {
+    margin-bottom: 2rem;
+    border: 1px solid #444;
+    padding: 1rem;
+  }
+  
+  .release-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff5555;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .release-item {
+    text-align: center;
+  }
+  
+  .release-item img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #444;
+  }
+  
+  .release-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #000;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: #ccc;
+    font-size: 0.8rem;
+  }
+  
+  /* RESPONSIVE MEDIA QUERIES */
+  @media (max-width: 768px) {
+    /* Adjust nav layout for mobile */
+    header {
+      align-items: inherit;
+    }
+    nav ul {
+      margin-top: 0.5rem;
+    }
+  
+    /* Hero text resizing */
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+    .hero-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    /* Grid layout can switch to single-column if needed */
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
