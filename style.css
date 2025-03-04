@@ -104,6 +104,9 @@ nav ul li a {
   white-space: nowrap;
 }
 
+nav ul li a:link {
+  color: #ccc;
+}
 
 nav ul li a:hover {
   color: #fff;
