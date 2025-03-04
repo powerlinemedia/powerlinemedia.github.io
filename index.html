@@ -6,6 +6,12 @@
         <title>Toast Destroyer</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="style.css" />
+
+        <meta property="og:title" content="Toast Destroyer">
+        <meta property="og:description" content="Listen to the newest release by Toast Destroyer. Explore our music and stay updated!">
+        <meta property="og:image" content="https://toastdestroyer.com/toastbanner.png">
+        <meta property="og:url" content="https://toastdestroyer.com/">
+        <meta property="og:type" content="website">
     </head>
     <body>
         <header>
@@ -34,17 +40,42 @@
             
             <section class="hero">
                 <div class="hero-content">
-                <h1 style="text-shadow: 4px 4px 8px #000000;">MIXTAPE COMING SOON:</h1>
-                <h2 style="text-shadow: 4px 4px 8px #000000;">Welcome To The Core (Feat. The voices in my head)</h2>
-                <!-- <button class="preview-btn">► preview</button>
+                <h1 style="text-shadow: 4px 4px 8px #000000;">ALBUM OUT NOW</h1>
+                <h2 style="text-shadow: 4px 4px 8px #000000;">(scrapped, vol. 1)</h2>
+                <br>
+                <button class="preview-btn">► preview</button>
                 <p class="available-on">
                     Available on: <br>
-                    <a href="#" target="_blank">iTunes</a> |
-                    <a href="#" target="_blank">Google Play</a> |
-                    <a href="#" target="_blank">Spotify</a>
-                </p> -->
+                    <a href="https://toastdestroyer.bandcamp.com/" target="_blank">Bandcamp</a><!-- |
+                    <a href="#" target="_blank">Google Play</a>-->
+                </p>
                 </div>
             </section>
+
+            <audio id="preview-audio">
+                <source src="preview.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <script>
+                const button = document.querySelector(".preview-btn");
+                const audio = document.getElementById("preview-audio");
+            
+                button.addEventListener("click", () => {
+                    if (audio.paused) {
+                        audio.play();
+                        button.textContent = "■ preview";
+                    } else {
+                        audio.pause();
+                        audio.currentTime = 0;
+                        button.textContent = "► preview";
+                    }
+                });
+            
+                audio.addEventListener("ended", () => {
+                    button.textContent = "► preview";
+                });
+            </script>
 
             <section class="news-section">
                 <div class="news-header">
