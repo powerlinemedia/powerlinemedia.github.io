@@ -48,6 +48,22 @@ p {
   margin: initial;
 }
 
+a:link {
+  color: rgb(241, 0, 0);
+}
+
+a:visited {
+  color: rgb(184, 0, 15);
+}
+
+a:hover {
+  color: rgb(255, 32, 50);
+}
+
+a:active {
+  color: rgb(184, 0, 15);
+}
+
 .list {
   margin: 0px 32px;
 }
@@ -91,6 +107,10 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #fff;
+}
+
+nav ul li a:visited {
+  color: #ccc;
 }
 
 nav ul li a.active {
